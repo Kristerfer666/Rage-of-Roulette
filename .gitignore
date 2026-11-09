@@ -1,0 +1,46 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Uu]serSettings/
+
+# Build output folders (version-specific)
+Build_Ver*/
+
+# Unity cache files
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity3D generated meta files
+*.pidb
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+ExportedObj/
+.consulo/
+
+# Burst debug info
+*_BurstDebugInformation_DoNotShip/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Unity package lock (optional - keep if you want reproducible builds)
+# Packages/packages-lock.json

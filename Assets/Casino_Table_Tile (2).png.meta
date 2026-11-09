@@ -1,0 +1,1157 @@
+fileFormatVersion: 2
+guid: b80f58b2096db44108fd767f3738be40
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 398797317882226524
+    second: Casino_Table_Tile (2)_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 15
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c57afb53c00d88500800000000000000
+      internalID: 398797317882226524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 90
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efda9bdcfc36e412f9ee599582f3a333
+      internalID: 1119094442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 90
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f93a8ccafa64ba986383f73f54b4ea
+      internalID: -898664467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_3
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 90
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1f127498da441e388e41786bcc389a
+      internalID: -313524577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_4
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 90
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30cfcd996591b4782b25872456399ec7
+      internalID: -129909722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_5
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 90
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433307cead859473e89ede38298b02cb
+      internalID: -2092940710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_6
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 90
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e165ca08059c54ccf8eb8aa9678755f7
+      internalID: 1938472939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 75
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93542f8f2945b43fb8386dace690ecf4
+      internalID: -1765638930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_8
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 75
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8932d3b522e4c20a96d2706d0fde0b
+      internalID: 1683711393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_9
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 75
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57013b012fe184d5fb88b76acfebf178
+      internalID: -329671868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_10
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 75
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ac1934cc1ab4306aca7f355940bbfe
+      internalID: -1450803376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_11
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 75
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8080c795a01714ff4931afc03e6f9a75
+      internalID: 236326773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_12
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 75
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b79136060344106aef1a6ff654b8dc
+      internalID: -311725263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_13
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 75
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c8f8b285c144bce85b1a12c750b070
+      internalID: -582723681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ae6ece43981474eae91be2e0cfac86
+      internalID: 816306052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_15
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 60
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa0086ea8c68463aae8a42518074c52
+      internalID: -134372890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_16
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 60
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa461aeeb969b41139b2fa0119c1d954
+      internalID: 1313440751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_17
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 60
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0211a00cf49477287a56942ea181f1
+      internalID: 33982780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_18
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 60
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a99a8da9ae724d16a0be4b8b73059d5
+      internalID: 1143171848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_19
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 60
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263085d1418b346999dc17636ace4961
+      internalID: 2094189413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_20
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 60
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70deb9dc2d0e24c3db63af99bdf5704c
+      internalID: 321177203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 45
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b13a91fa012e405fb762ea648bd04fc
+      internalID: -1850873974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_22
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 45
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3e2f678c13d42a1928f04a83f04797
+      internalID: -512809400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_23
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 45
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f0f0602e222f47c0ba7aa36708295d2
+      internalID: 340060721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_24
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 45
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8af5f05f02a4453a4b0883641647da
+      internalID: 427982722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_25
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 45
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713184b0ede2a4e1cb399e5844e10615
+      internalID: -1611996755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_26
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 45
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7f9e3344fb44aeea0b4da09aa573c3
+      internalID: -388347612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_27
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 45
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a425df793d14ceda4619b681c03d2c
+      internalID: 1713019052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62647dc67201d410cbe686f5ee1acdb4
+      internalID: -973440229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_29
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 30
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f037ea558b347e2a57187ae755aeab
+      internalID: 1015739607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_30
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 30
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2aeac57d4b844590bcd29422b6ff893
+      internalID: -1699298064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_31
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 30
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3ec435f90904f959f32a65e35b1c7e
+      internalID: -640860778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_32
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 30
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb7c14b318664a0fa4faa6119d31502
+      internalID: 1645830679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_33
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 30
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5602fbcfecdf4304a6fd6c127266cb3
+      internalID: 1244095098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_34
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 30
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b94ed58fe204c77966dcb2201b56cb
+      internalID: -2070703299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3c2626eba01483a95b4cda11402446
+      internalID: -1249309550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_36
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 15
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5c14829f77c4bc0ab977f435f6545a
+      internalID: 1618012256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_37
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 15
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4221dd799d72435e91c3bd0d2d97112
+      internalID: -2100188640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_38
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 15
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79de6168c8c9e4623a4b2178d48bc66a
+      internalID: 908811573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_39
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 15
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44dd41e0a210c44c589e72453b633feb
+      internalID: -2035723692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_40
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 15
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2b2c93a9c384df7b192d42ba5f4f9b
+      internalID: -1702058237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_41
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 15
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2de67d577753409389b5dba3c2ea4cd
+      internalID: 569031189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb938f5d0d9f416b88259f98003d354
+      internalID: -660045816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_43
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc70798262899483485c94ba470151eb
+      internalID: -448217239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casino_Table_Tile (2)_44
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e426263dbbaa346b8816c8db5100bb26
+      internalID: 617353976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9fac0dc004e014c71b4b4c51bfd636c7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":7.0},"gridSpriteSize":{"x":15.0,"y":15.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Casino_Table_Tile (2)_0: 398797317882226524
+      Casino_Table_Tile (2)_1: 1119094442
+      Casino_Table_Tile (2)_10: -1450803376
+      Casino_Table_Tile (2)_11: 236326773
+      Casino_Table_Tile (2)_12: -311725263
+      Casino_Table_Tile (2)_13: -582723681
+      Casino_Table_Tile (2)_14: 816306052
+      Casino_Table_Tile (2)_15: -134372890
+      Casino_Table_Tile (2)_16: 1313440751
+      Casino_Table_Tile (2)_17: 33982780
+      Casino_Table_Tile (2)_18: 1143171848
+      Casino_Table_Tile (2)_19: 2094189413
+      Casino_Table_Tile (2)_2: -898664467
+      Casino_Table_Tile (2)_20: 321177203
+      Casino_Table_Tile (2)_21: -1850873974
+      Casino_Table_Tile (2)_22: -512809400
+      Casino_Table_Tile (2)_23: 340060721
+      Casino_Table_Tile (2)_24: 427982722
+      Casino_Table_Tile (2)_25: -1611996755
+      Casino_Table_Tile (2)_26: -388347612
+      Casino_Table_Tile (2)_27: 1713019052
+      Casino_Table_Tile (2)_28: -973440229
+      Casino_Table_Tile (2)_29: 1015739607
+      Casino_Table_Tile (2)_3: -313524577
+      Casino_Table_Tile (2)_30: -1699298064
+      Casino_Table_Tile (2)_31: -640860778
+      Casino_Table_Tile (2)_32: 1645830679
+      Casino_Table_Tile (2)_33: 1244095098
+      Casino_Table_Tile (2)_34: -2070703299
+      Casino_Table_Tile (2)_35: -1249309550
+      Casino_Table_Tile (2)_36: 1618012256
+      Casino_Table_Tile (2)_37: -2100188640
+      Casino_Table_Tile (2)_38: 908811573
+      Casino_Table_Tile (2)_39: -2035723692
+      Casino_Table_Tile (2)_4: -129909722
+      Casino_Table_Tile (2)_40: -1702058237
+      Casino_Table_Tile (2)_41: 569031189
+      Casino_Table_Tile (2)_42: -660045816
+      Casino_Table_Tile (2)_43: -448217239
+      Casino_Table_Tile (2)_44: 617353976
+      Casino_Table_Tile (2)_5: -2092940710
+      Casino_Table_Tile (2)_6: 1938472939
+      Casino_Table_Tile (2)_7: -1765638930
+      Casino_Table_Tile (2)_8: 1683711393
+      Casino_Table_Tile (2)_9: -329671868
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
