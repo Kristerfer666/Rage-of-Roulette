@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,12 +7,21 @@ public class Health : MonoBehaviour
     public int startHP = 3;
     public int currentHP;
 
-    public float invincibilityDuration = 4f;
-    public float flashInterval = 0.25f;
+    public float invincibilityDuration = 3f;
+    public float flashInterval = 0.125f;
+    // blocked damage that ends invincibility early (the hit that started it does not count)
+    public int blockedDamageToEndInvincibility = 3;
 
     public PlayerAnimation playerAnim;
 
     private bool isInvincible = false;
+    private float invincibleTime = 0f;
+    private int blockedDamage = 0;
+
+    public bool IsInvincible
+    {
+        get { return isInvincible; }
+    }
 
     void Start()
     {
@@ -21,9 +29,39 @@ public class Health : MonoBehaviour
         playerAnim.SetSkin(currentHP);
     }
 
+    void Update()
+    {
+        if (!isInvincible) return;
+
+        invincibleTime += Time.deltaTime;
+        if (invincibleTime >= invincibilityDuration)
+        {
+            EndInvincibility();
+            return;
+        }
+
+        // even phases are white, odd phases show the chip
+        int phase = (int)(invincibleTime / flashInterval);
+        playerAnim.SetFlash(phase % 2 == 0);
+
+        // the old skin shows once (phase 1); the new one is swapped in behind the second flash
+        if (phase >= 2)
+        {
+            playerAnim.SetSkin(currentHP);
+        }
+    }
+
     public void TakeDamage(int amount)
     {
-        if (isInvincible) return;
+        if (isInvincible)
+        {
+            blockedDamage += amount;
+            if (blockedDamage >= blockedDamageToEndInvincibility)
+            {
+                EndInvincibility();
+            }
+            return;
+        }
 
         currentHP -= amount;
         if (currentHP <= 0)
@@ -31,7 +69,11 @@ public class Health : MonoBehaviour
             SceneManager.LoadScene("Game Over");
             return;
         }
-        StartCoroutine(InvincibilityRoutine());
+
+        isInvincible = true;
+        invincibleTime = 0f;
+        blockedDamage = 0;
+        playerAnim.SetFlash(true);
     }
 
     public void Heal(int amount)
@@ -43,29 +85,10 @@ public class Health : MonoBehaviour
         }
     }
 
-    IEnumerator InvincibilityRoutine()
+    private void EndInvincibility()
     {
-        isInvincible = true;
-
-        float elapsed = 0f;
-        while (elapsed < invincibilityDuration)
-        {
-            // even phases are white, odd phases show the chip
-            int phase = (int)(elapsed / flashInterval);
-            playerAnim.SetFlash(phase % 2 == 0);
-
-            // the old skin shows once (phase 1); the new one is swapped in behind the second flash
-            if (phase >= 2)
-            {
-                playerAnim.SetSkin(currentHP);
-            }
-
-            elapsed += Time.deltaTime;
-            yield return null;
-        }
-
+        isInvincible = false;
         playerAnim.SetFlash(false);
         playerAnim.SetSkin(currentHP);
-        isInvincible = false;
     }
 }

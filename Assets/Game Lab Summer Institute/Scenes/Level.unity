@@ -4493,8 +4493,8 @@ MonoBehaviour:
   maxHP: 5
   startHP: 3
   currentHP: 3
-  invincibilityDuration: 4
-  flashInterval: 0.25
+  invincibilityDuration: 3
+  flashInterval: 0.125
   playerAnim: {fileID: 1980924219}
 --- !u!114 &1980924219
 MonoBehaviour:
