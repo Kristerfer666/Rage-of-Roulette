@@ -18,8 +18,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerInput.x = Input.GetAxis("Horizontal");
-        playerInput.y = Input.GetAxis("Vertical");
+        // raw input is exactly 0 the moment the keys are released; the smoothed
+        // GetAxis value lingers for a moment, and normalizing it kept full speed
+        playerInput.x = Input.GetAxisRaw("Horizontal");
+        playerInput.y = Input.GetAxisRaw("Vertical");
         UpdateFacing();
     }
 
@@ -29,6 +31,10 @@ public class PlayerMovement : MonoBehaviour
         Vector2 movement = playerInput.normalized * speed * Time.fixedDeltaTime;
         Vector2 newPos = currentPos + movement;
         playerPos.MovePosition(newPos);
+
+        // clear any speed left over from being pushed in a collision, so the chip
+        // never slides on its own (the Rigidbody has no damping to slow it down)
+        playerPos.linearVelocity = Vector2.zero;
     }
 
     private void UpdateFacing()
