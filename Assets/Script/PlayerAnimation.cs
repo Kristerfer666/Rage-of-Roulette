@@ -21,11 +21,18 @@ public class PlayerAnimation : MonoBehaviour
     public float horizontalFrameRate = 12;
     public float verticalFrameRate = 12;
 
+    // seconds the walk animation takes to ease to a stop after input is released,
+    // and to ease back up to full speed when input starts again
+    public float slowDownTime = 0.2f;
+    public float speedUpTime = 0.1f;
+
     [HideInInspector] public Facing facing = Facing.Right;
+    [HideInInspector] public bool moving = false;
 
     private int skinIndex = 0;
     private bool flashing = false;
     private float framePos = 0f;
+    private float animSpeed = 0f;
 
     public void SetSkin(int hp)
     {
@@ -44,8 +51,21 @@ public class PlayerAnimation : MonoBehaviour
         Sprite[] frames = vertical ? skin.verticalFrames : skin.horizontalFrames;
         float frameRate = vertical ? verticalFrameRate : horizontalFrameRate;
 
+        // ease the animation speed toward full while moving and toward zero when idle,
+        // so the chip settles on a frame instead of freezing instantly
+        float target = moving ? 1f : 0f;
+        float easeTime = moving ? speedUpTime : slowDownTime;
+        if (easeTime <= 0f)
+        {
+            animSpeed = target;
+        }
+        else
+        {
+            animSpeed = Mathf.MoveTowards(animSpeed, target, Time.deltaTime / easeTime);
+        }
+
         // going down plays the vertical animation backwards
-        float step = frameRate * Time.deltaTime;
+        float step = frameRate * animSpeed * Time.deltaTime;
         framePos += facing == Facing.Down ? -step : step;
         framePos = Mathf.Repeat(framePos, frames.Length);
         int frame = Mathf.Min((int)framePos, frames.Length - 1);

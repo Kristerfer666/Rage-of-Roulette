@@ -51,6 +51,9 @@ public class PlayerMovement : MonoBehaviour
         lastInputX = inputX;
         lastInputY = inputY;
 
+        // the walk animation only plays while a direction is held
+        playerAnim.moving = inputX != 0 || inputY != 0;
+
         // with no input the facing is left alone, so the chip keeps its last direction
         if (inputX != 0 && (inputY == 0 || horizontalPressedLast))
         {
