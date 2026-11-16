@@ -4488,13 +4488,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acdf456a1a00748d08a64afc3f535815, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHP: 5
   startHP: 3
   currentHP: 3
   invincibilityDuration: 3
   flashInterval: 0.125
+  blockedDamageToEndInvincibility: 3
   playerAnim: {fileID: 1980924219}
 --- !u!114 &1980924219
 MonoBehaviour:
@@ -4506,7 +4507,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e5c6813e105474da28d99397560ebed, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
   playerSprite: {fileID: 1980924211}
   skins:
@@ -4562,12 +4563,13 @@ MonoBehaviour:
     - {fileID: 8797812082684721439, guid: c8a4a2b25c49f47b6bb9045a1bddaa8d, type: 3}
   horizontalFlash: {fileID: -8732405920207839732, guid: 21e0240bed43b4c6194e3dc0edd3e39c, type: 3}
   verticalFlash: {fileID: 3538154773708561350, guid: 6a94a1d5b403f45cb94cb812319ce68e, type: 3}
-  horizontalFrameRate: 12
+  horizontalFrameRate: 20
   verticalFrameRate: 12
-  idleFrameRate: 12
+  idleFrameRate: 4
   slowDownTime: 0.2
   speedUpTime: 0.1
   facing: 0
+  moving: 0
 --- !u!1001 &1982772892
 PrefabInstance:
   m_ObjectHideFlags: 0

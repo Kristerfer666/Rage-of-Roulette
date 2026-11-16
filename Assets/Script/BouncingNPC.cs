@@ -11,8 +11,17 @@ public class BouncingNPC : MonoBehaviour
 
     private void Start()
     {
+        // attack is not reset here: Start runs a frame after spawning, so resetting it
+        // would undo Launch() and leave a freshly shot ball waiting for the player
         player2d = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
-        attack = false;
+    }
+
+    // called by a shooter right after spawning this ball: it flies off immediately,
+    // instead of waiting until the player is within range like a ball placed in the level
+    public void Launch(Vector2 launchDirection)
+    {
+        direction = launchDirection;
+        attack = true;
     }
 
     public void FixedUpdate()

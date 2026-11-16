@@ -380,6 +380,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f41b7a72d37cb84597ed035e03b9ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  damage: 1
+  bounceSpeed: 8
+  bounceDuration: 0.2
 --- !u!114 &-672260321437144699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,6 +399,13 @@ MonoBehaviour:
   rb2d: {fileID: 5602048861010082244}
   direction: {x: 0, y: 0}
   projectilePrefab: {fileID: 2646341701442572060, guid: bc851581991cd07478eface0b85fad76, type: 3}
+  spawnDistance: 1
+  noticeDistance: 10
+  preferredDistance: 5
+  distanceTolerance: 1
+  speedRampDistance: 3
+  acceleration: 4
+  followSpeed: 5
 --- !u!114 &5180405081518238274
 MonoBehaviour:
   m_ObjectHideFlags: 0
