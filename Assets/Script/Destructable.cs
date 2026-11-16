@@ -41,13 +41,26 @@ public class Destructable : MonoBehaviour
             {
                 StartCoroutine(Explosion());
             }
+            if (coinPrefab != null)
             {
+                // coins start at the centre of the dead object and fly out into a ring around it
                 int lootNum = Random.Range(lootMin, lootMax + 1);
-                for(int i=0; i < lootNum; i++)
+                Vector2 centre = transform.position;
+                Loot prefabLoot = coinPrefab.GetComponent<Loot>();
+                float radius = prefabLoot != null ? prefabLoot.ringRadius : 0.8f;
+                Vector2[] offsets = Loot.RingOffsets(lootNum, radius);
+                for (int i = 0; i < lootNum; i++)
                 {
-                    Vector2 lootPos = new Vector2(i - (lootNum - 1) / 2f, 0f);
-                    GameObject newLoot = Instantiate(coinPrefab);
-                    newLoot.transform.position = (Vector2)transform.position + lootPos;
+                    GameObject newLoot = Instantiate(coinPrefab, centre, Quaternion.identity);
+                    Loot loot = newLoot.GetComponent<Loot>();
+                    if (loot != null)
+                    {
+                        loot.FlyOut(centre, centre + offsets[i]);
+                    }
+                    else
+                    {
+                        newLoot.transform.position = centre + offsets[i];
+                    }
                 }
             }
         }else
