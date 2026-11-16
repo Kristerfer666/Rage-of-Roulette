@@ -32,6 +32,11 @@ public class Projectile : MonoBehaviour
         {
             return;
         }
+        // bullets fly straight over coins instead of being destroyed by them
+        if (collision.GetComponent<Loot>() != null)
+        {
+            return;
+        }
         if ((collision.gameObject.tag == "Destructable") || (collision.gameObject.tag == "Enemy"))
         {
             Destructable destComp = collision.gameObject.GetComponent<Destructable>();
