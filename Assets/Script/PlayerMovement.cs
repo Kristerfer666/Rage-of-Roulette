@@ -9,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D playerPos;
     public PlayerAnimation playerAnim;
     public SpriteRenderer meleeSprite;
-    public float attackAngleUp = -90f;
-    public float attackAngleDown = 90f;
+    public float attackAngleUp = 90f;
+    public float attackAngleDown = -90f;
     private int lastInputX = 0;
     private int lastInputY = 0;
     private bool horizontalPressedLast = true;

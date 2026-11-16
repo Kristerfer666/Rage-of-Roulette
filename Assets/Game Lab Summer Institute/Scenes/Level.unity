@@ -4437,8 +4437,8 @@ MonoBehaviour:
   playerPos: {fileID: 1980924209}
   playerAnim: {fileID: 1980924219}
   meleeSprite: {fileID: 1938258576}
-  attackAngleUp: -90
-  attackAngleDown: 90
+  attackAngleUp: 90
+  attackAngleDown: -90
 --- !u!114 &1980924215
 MonoBehaviour:
   m_ObjectHideFlags: 0
