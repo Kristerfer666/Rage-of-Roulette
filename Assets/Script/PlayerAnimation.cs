@@ -21,8 +21,11 @@ public class PlayerAnimation : MonoBehaviour
     public float horizontalFrameRate = 12;
     public float verticalFrameRate = 12;
 
-    // seconds the walk animation takes to ease to a stop after input is released,
-    // and to ease back up to full speed when input starts again
+    // frames per second the animation keeps playing at while no direction is held
+    public float idleFrameRate = 2;
+
+    // seconds the animation takes to ease down to the idle frame rate after input is
+    // released, and to ease back up to the walking frame rate when input starts again
     public float slowDownTime = 0.2f;
     public float speedUpTime = 0.1f;
 
@@ -32,7 +35,7 @@ public class PlayerAnimation : MonoBehaviour
     private int skinIndex = 0;
     private bool flashing = false;
     private float framePos = 0f;
-    private float animSpeed = 0f;
+    private float currentFrameRate = -1f;
 
     public void SetSkin(int hp)
     {
@@ -49,23 +52,24 @@ public class PlayerAnimation : MonoBehaviour
         bool vertical = facing == Facing.Up || facing == Facing.Down;
         ChipSkin skin = skins[skinIndex];
         Sprite[] frames = vertical ? skin.verticalFrames : skin.horizontalFrames;
-        float frameRate = vertical ? verticalFrameRate : horizontalFrameRate;
+        float walkFrameRate = vertical ? verticalFrameRate : horizontalFrameRate;
 
-        // ease the animation speed toward full while moving and toward zero when idle,
-        // so the chip settles on a frame instead of freezing instantly
-        float target = moving ? 1f : 0f;
+        // the animation never freezes: it eases between the walking frame rate while
+        // moving and the slow idle frame rate when no direction is held
+        float target = moving ? walkFrameRate : idleFrameRate;
         float easeTime = moving ? speedUpTime : slowDownTime;
-        if (easeTime <= 0f)
+        if (currentFrameRate < 0f || easeTime <= 0f)
         {
-            animSpeed = target;
+            currentFrameRate = target;
         }
         else
         {
-            animSpeed = Mathf.MoveTowards(animSpeed, target, Time.deltaTime / easeTime);
+            float change = Mathf.Abs(walkFrameRate - idleFrameRate) / easeTime;
+            currentFrameRate = Mathf.MoveTowards(currentFrameRate, target, change * Time.deltaTime);
         }
 
         // going down plays the vertical animation backwards
-        float step = frameRate * animSpeed * Time.deltaTime;
+        float step = currentFrameRate * Time.deltaTime;
         framePos += facing == Facing.Down ? -step : step;
         framePos = Mathf.Repeat(framePos, frames.Length);
         int frame = Mathf.Min((int)framePos, frames.Length - 1);
