@@ -1,13 +1,25 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour
 {
+    public int damage = 1;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        HurtPlayer(collision);
+    }
+
+    // Stay as well as Enter, so an enemy still pressed against the player hurts again once invincibility ends
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        HurtPlayer(collision);
+    }
+
+    private void HurtPlayer(Collision2D collision)
+    {
+        if (CompareTag("Enemy") && collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Game Over");
+            collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         }
     }
 }

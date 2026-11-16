@@ -4266,13 +4266,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1980924212}
   - component: {fileID: 1980924211}
-  - component: {fileID: 1980924210}
   - component: {fileID: 1980924209}
   - component: {fileID: 1980924213}
   - component: {fileID: 1980924214}
   - component: {fileID: 1980924217}
   - component: {fileID: 1980924215}
   - component: {fileID: 1980924216}
+  - component: {fileID: 1980924218}
+  - component: {fileID: 1980924219}
   m_Layer: 0
   m_Name: Character_Chip
   m_TagString: Player
@@ -4307,27 +4308,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1980924210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980924208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fef51e07b81de5a4aa503b8007305fe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SimpleSpriteAnimation
-  frames:
-  - {fileID: -2510476293373519475, guid: 7944a5fa3a73d78499880618fbe0df6b, type: 3}
-  - {fileID: 1013310384, guid: 7944a5fa3a73d78499880618fbe0df6b, type: 3}
-  - {fileID: -678533425, guid: 7944a5fa3a73d78499880618fbe0df6b, type: 3}
-  - {fileID: 221091084, guid: 7944a5fa3a73d78499880618fbe0df6b, type: 3}
-  - {fileID: -1616376820, guid: 7944a5fa3a73d78499880618fbe0df6b, type: 3}
-  frameRate: 12
-  loop: 1
-  destroyOnComplete: 0
 --- !u!212 &1980924211
 SpriteRenderer:
   serializedVersion: 2
@@ -4455,8 +4435,10 @@ MonoBehaviour:
   speed: 5
   playerInput: {x: 0, y: 0}
   playerPos: {fileID: 1980924209}
-  playerSprite: {fileID: 1980924211}
+  playerAnim: {fileID: 1980924219}
   meleeSprite: {fileID: 1938258576}
+  attackAngleUp: -90
+  attackAngleDown: 90
 --- !u!114 &1980924215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4496,6 +4478,93 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeleeAttack
   appearObject: {fileID: 1938258572}
+--- !u!114 &1980924218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980924208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdf456a1a00748d08a64afc3f535815, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  maxHP: 5
+  startHP: 3
+  currentHP: 3
+  invincibilityDuration: 4
+  flashInterval: 0.25
+  playerAnim: {fileID: 1980924219}
+--- !u!114 &1980924219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980924208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5c6813e105474da28d99397560ebed, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
+  playerSprite: {fileID: 1980924211}
+  skins:
+  - horizontalFrames:
+    - {fileID: -2510476293373519475, guid: 7944a5fa3a73d78499880618fbe0df6b, type: 3}
+    - {fileID: 1013310384, guid: 7944a5fa3a73d78499880618fbe0df6b, type: 3}
+    - {fileID: -678533425, guid: 7944a5fa3a73d78499880618fbe0df6b, type: 3}
+    - {fileID: 221091084, guid: 7944a5fa3a73d78499880618fbe0df6b, type: 3}
+    - {fileID: -1616376820, guid: 7944a5fa3a73d78499880618fbe0df6b, type: 3}
+    verticalFrames:
+    - {fileID: -2595264415901396420, guid: 394488549ef294e1ab568ff9debbce31, type: 3}
+    - {fileID: 4090403295304852828, guid: 394488549ef294e1ab568ff9debbce31, type: 3}
+    - {fileID: 5152844086590582640, guid: 394488549ef294e1ab568ff9debbce31, type: 3}
+  - horizontalFrames:
+    - {fileID: -9184804270465947478, guid: 8b4c1aee269c94119b7d06a02fa4e1dc, type: 3}
+    - {fileID: 1080207293, guid: 8b4c1aee269c94119b7d06a02fa4e1dc, type: 3}
+    - {fileID: -441765443, guid: 8b4c1aee269c94119b7d06a02fa4e1dc, type: 3}
+    - {fileID: 723908006, guid: 8b4c1aee269c94119b7d06a02fa4e1dc, type: 3}
+    - {fileID: 778588685, guid: 8b4c1aee269c94119b7d06a02fa4e1dc, type: 3}
+    verticalFrames:
+    - {fileID: 8776760747914327747, guid: 6a2e87afeacb04fc68c2f5a654957b99, type: 3}
+    - {fileID: 6884985289884193947, guid: 6a2e87afeacb04fc68c2f5a654957b99, type: 3}
+    - {fileID: -7297609325987388388, guid: 6a2e87afeacb04fc68c2f5a654957b99, type: 3}
+  - horizontalFrames:
+    - {fileID: -7456565581058204257, guid: a3b16b65ae09e4d52bf850b86dac25da, type: 3}
+    - {fileID: 1208797931, guid: a3b16b65ae09e4d52bf850b86dac25da, type: 3}
+    - {fileID: 1686583302, guid: a3b16b65ae09e4d52bf850b86dac25da, type: 3}
+    - {fileID: 590163497, guid: a3b16b65ae09e4d52bf850b86dac25da, type: 3}
+    - {fileID: 868060749, guid: a3b16b65ae09e4d52bf850b86dac25da, type: 3}
+    verticalFrames:
+    - {fileID: 1155142024105232699, guid: a85961a16afa64c65804a144b23226ce, type: 3}
+    - {fileID: -2697961767390842110, guid: a85961a16afa64c65804a144b23226ce, type: 3}
+    - {fileID: -5990312613929615785, guid: a85961a16afa64c65804a144b23226ce, type: 3}
+  - horizontalFrames:
+    - {fileID: 6126405274042447927, guid: c223024cdf6f24f7380fccb859f28115, type: 3}
+    - {fileID: 63408967, guid: c223024cdf6f24f7380fccb859f28115, type: 3}
+    - {fileID: -2001424891, guid: c223024cdf6f24f7380fccb859f28115, type: 3}
+    - {fileID: -775231017, guid: c223024cdf6f24f7380fccb859f28115, type: 3}
+    - {fileID: 615255365, guid: c223024cdf6f24f7380fccb859f28115, type: 3}
+    verticalFrames:
+    - {fileID: -926562223665934191, guid: 14b8b98b2691f4d1faacd08b4aae903a, type: 3}
+    - {fileID: 2392547496989024968, guid: 14b8b98b2691f4d1faacd08b4aae903a, type: 3}
+    - {fileID: 9151669136559845110, guid: 14b8b98b2691f4d1faacd08b4aae903a, type: 3}
+  - horizontalFrames:
+    - {fileID: -5740009463768716073, guid: e5993909cd3c847d7a28585afa5cac16, type: 3}
+    - {fileID: 276598596, guid: e5993909cd3c847d7a28585afa5cac16, type: 3}
+    - {fileID: 672188588, guid: e5993909cd3c847d7a28585afa5cac16, type: 3}
+    - {fileID: 899956380, guid: e5993909cd3c847d7a28585afa5cac16, type: 3}
+    - {fileID: -1956749029, guid: e5993909cd3c847d7a28585afa5cac16, type: 3}
+    verticalFrames:
+    - {fileID: -827174572966282021, guid: c8a4a2b25c49f47b6bb9045a1bddaa8d, type: 3}
+    - {fileID: -2690118111536317314, guid: c8a4a2b25c49f47b6bb9045a1bddaa8d, type: 3}
+    - {fileID: 8797812082684721439, guid: c8a4a2b25c49f47b6bb9045a1bddaa8d, type: 3}
+  horizontalFlash: {fileID: -8732405920207839732, guid: 21e0240bed43b4c6194e3dc0edd3e39c, type: 3}
+  verticalFlash: {fileID: 3538154773708561350, guid: 6a94a1d5b403f45cb94cb812319ce68e, type: 3}
+  horizontalFrameRate: 12
+  verticalFrameRate: 12
+  facing: 0
 --- !u!1001 &1982772892
 PrefabInstance:
   m_ObjectHideFlags: 0
