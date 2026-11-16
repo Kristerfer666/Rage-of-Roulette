@@ -4564,6 +4564,9 @@ MonoBehaviour:
   verticalFlash: {fileID: 3538154773708561350, guid: 6a94a1d5b403f45cb94cb812319ce68e, type: 3}
   horizontalFrameRate: 12
   verticalFrameRate: 12
+  idleFrameRate: 12
+  slowDownTime: 0.2
+  speedUpTime: 0.1
   facing: 0
 --- !u!1001 &1982772892
 PrefabInstance:

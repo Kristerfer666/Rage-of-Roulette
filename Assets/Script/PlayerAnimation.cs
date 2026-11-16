@@ -22,7 +22,7 @@ public class PlayerAnimation : MonoBehaviour
     public float verticalFrameRate = 12;
 
     // frames per second the animation keeps playing at while no direction is held
-    public float idleFrameRate = 2;
+    public float idleFrameRate = 12;
 
     // seconds the animation takes to ease down to the idle frame rate after input is
     // released, and to ease back up to the walking frame rate when input starts again
