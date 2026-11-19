@@ -8,6 +8,9 @@ public class Dice : MonoBehaviour
     public float speed = 3;
     public Vector2 direction = new Vector2(0, -1);
 
+    // each falling dice shows one of these faces, picked at random
+    public Sprite[] faces;
+
     // damage the explosion deals to the player (once per dice)
     public int explosionDamage = 1;
 
@@ -54,10 +57,28 @@ public class Dice : MonoBehaviour
         explodeAnim = GetComponent<SimpleSpriteAnimation>();
         explodeAnim.enabled = false;
 
+        // picked in Start, after Destructable's Awake has set its normal sprite, so this one wins
+        PickRandomFace();
+
         // it lands straight below where it starts, at the height the player was standing
         landingPos = new Vector2(transform.position.x, playerRb2d.position.y);
         startHeight = Mathf.Max(transform.position.y - landingPos.y, 0.01f);
         UpdateShadow(transform.position.y);
+    }
+
+    private void PickRandomFace()
+    {
+        if (faces == null || faces.Length == 0) return;
+
+        Sprite face = faces[Random.Range(0, faces.Length)];
+        GetComponent<SpriteRenderer>().sprite = face;
+
+        // keep Destructable in step, so anything that resets the dice to its normal sprite shows this face
+        Destructable destructable = GetComponent<Destructable>();
+        if (destructable != null)
+        {
+            destructable.normalSprite = face;
+        }
     }
 
     void FixedUpdate()

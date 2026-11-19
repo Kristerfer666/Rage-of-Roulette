@@ -248,6 +248,13 @@ MonoBehaviour:
   rb2d: {fileID: 6974606643563033764}
   speed: 4
   direction: {x: 0, y: -1}
+  faces:
+  - {fileID: 39516445742236537, guid: 61ac2a17e4fcb4f02b865cf796d35c12, type: 3}
+  - {fileID: -673768300, guid: 61ac2a17e4fcb4f02b865cf796d35c12, type: 3}
+  - {fileID: -42948130, guid: 61ac2a17e4fcb4f02b865cf796d35c12, type: 3}
+  - {fileID: 1270084346, guid: 61ac2a17e4fcb4f02b865cf796d35c12, type: 3}
+  - {fileID: 1253008793, guid: 61ac2a17e4fcb4f02b865cf796d35c12, type: 3}
+  - {fileID: 1633279369, guid: 61ac2a17e4fcb4f02b865cf796d35c12, type: 3}
   explosionDamage: 1
   shadow: {fileID: 4411223344556677003}
   shadowStartScale: 0.3
