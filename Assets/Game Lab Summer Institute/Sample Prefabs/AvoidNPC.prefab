@@ -399,7 +399,7 @@ MonoBehaviour:
   rb2d: {fileID: 5602048861010082244}
   direction: {x: 0, y: 0}
   projectilePrefab: {fileID: 2646341701442572060, guid: bc851581991cd07478eface0b85fad76, type: 3}
-  spawnDistance: 1
+  spawnDistance: 0
   noticeDistance: 10
   preferredDistance: 5
   distanceTolerance: 1

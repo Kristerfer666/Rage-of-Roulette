@@ -9,8 +9,10 @@ public class AvoiderNPC : MonoBehaviour
     Rigidbody2D playerRb2d;
     public Vector2 direction;
     public GameObject projectilePrefab;
-    // how far in front of this enemy, toward the player, a shot ball appears
-    public float spawnDistance = 1f;
+    // how far in front of this enemy, toward the player, a shot ball appears.
+    // 0 spawns it inside this enemy, which is always clear of walls; a larger value
+    // still never places it past a wall
+    public float spawnDistance = 0f;
     private bool closeToPlayer = false;
 
     // starts chasing and shooting once the player comes this close
@@ -66,11 +68,14 @@ public class AvoiderNPC : MonoBehaviour
     void ShootPlayer(){
         if (dead) return;
 
-        GameObject newProjectile = Instantiate(projectilePrefab);
-        Vector2 throwDirection = playerRb2d.position - rb2d.position;
-        newProjectile.transform.position = transform.position + (Vector3)(throwDirection.normalized * spawnDistance);
+        Vector2 centre = rb2d.position;
+        Vector2 throwDirection = (playerRb2d.position - centre).normalized;
+        Vector2 spawnPos = centre + throwDirection * SafeSpawnDistance(throwDirection);
 
-        // the shot ball spawns touching this enemy, so without this they collide at once:
+        // spawned straight at its starting spot, so physics never sees it anywhere else first
+        GameObject newProjectile = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
+
+        // the shot ball starts inside or touching this enemy, so without this they collide at once:
         // the ball bounces back into the enemy and gets dragged along with it
         foreach (Collider2D shooterCol in GetComponentsInChildren<Collider2D>())
         {
@@ -81,13 +86,37 @@ public class AvoiderNPC : MonoBehaviour
         }
 
         BouncingNPC projectileComp = newProjectile.GetComponent<BouncingNPC>();
-        projectileComp.Launch(throwDirection.normalized);
+        projectileComp.Launch(throwDirection);
 
         Destructable shotDestructable = newProjectile.GetComponent<Destructable>();
         if (shotDestructable != null)
         {
             shots.Add(shotDestructable);
         }
+    }
+
+    // how far toward the player the ball may start without overlapping a wall
+    private float SafeSpawnDistance(Vector2 direction)
+    {
+        if (spawnDistance <= 0f) return 0f;
+
+        float ballRadius = 0.5f;
+        CircleCollider2D ballCol = projectilePrefab.GetComponent<CircleCollider2D>();
+        if (ballCol != null)
+        {
+            Vector3 scale = projectilePrefab.transform.localScale;
+            ballRadius = ballCol.radius * Mathf.Max(Mathf.Abs(scale.x), Mathf.Abs(scale.y));
+        }
+
+        float allowed = spawnDistance;
+        foreach (RaycastHit2D hit in Physics2D.CircleCastAll(rb2d.position, ballRadius, direction, spawnDistance))
+        {
+            if (hit.collider.CompareTag("Wall") && hit.distance < allowed)
+            {
+                allowed = hit.distance;
+            }
+        }
+        return allowed;
     }
 
     public void FixedUpdate()
