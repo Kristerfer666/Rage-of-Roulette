@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class AvoiderNPC : MonoBehaviour
 {
@@ -29,12 +30,42 @@ public class AvoiderNPC : MonoBehaviour
 
     private Vector2 currentVelocity = Vector2.zero;
 
+    // when this enemy dies, every white ball it shot dies with it; tick to let those drop coins too
+    public bool shotsDropCoinsWhenKilled = false;
+
+    private List<Destructable> shots = new List<Destructable>();
+    private bool dead = false;
+
     void Start()
     {
         playerRb2d = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+
+        Destructable destructable = GetComponent<Destructable>();
+        if (destructable != null)
+        {
+            destructable.Died += OnDied;
+        }
+    }
+
+    // called the instant health reaches 0, not when the explosion animation ends
+    private void OnDied()
+    {
+        dead = true;
+        CancelInvoke(nameof(ShootPlayer));
+
+        foreach (Destructable shot in shots)
+        {
+            if (shot != null) // already gone if it bounced 20 times or was shot down
+            {
+                shot.Kill(shotsDropCoinsWhenKilled);
+            }
+        }
+        shots.Clear();
     }
 
     void ShootPlayer(){
+        if (dead) return;
+
         GameObject newProjectile = Instantiate(projectilePrefab);
         Vector2 throwDirection = playerRb2d.position - rb2d.position;
         newProjectile.transform.position = transform.position + (Vector3)(throwDirection.normalized * spawnDistance);
@@ -51,10 +82,18 @@ public class AvoiderNPC : MonoBehaviour
 
         BouncingNPC projectileComp = newProjectile.GetComponent<BouncingNPC>();
         projectileComp.Launch(throwDirection.normalized);
+
+        Destructable shotDestructable = newProjectile.GetComponent<Destructable>();
+        if (shotDestructable != null)
+        {
+            shots.Add(shotDestructable);
+        }
     }
 
     public void FixedUpdate()
     {
+        if (dead) return;
+
         Vector2 awayFromPlayer = rb2d.position - playerRb2d.position;
         float currentDistance = awayFromPlayer.magnitude;
 
