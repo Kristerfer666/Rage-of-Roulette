@@ -23,6 +23,12 @@ public class Health : MonoBehaviour
         get { return isInvincible; }
     }
 
+    // which flash step the invincibility is on: even steps are the white flash, odd steps show the chip
+    public int FlashPhase
+    {
+        get { return (int)(invincibleTime / flashInterval); }
+    }
+
     void Start()
     {
         currentHP = Mathf.Clamp(startHP, 1, maxHP);
