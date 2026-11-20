@@ -142,6 +142,23 @@ public class Dice : MonoBehaviour
         explodeAnim.enabled = true;
     }
 
+    // the boss died: a dice still falling vanishes, and one already exploding finishes its
+    // animation but can no longer hurt the player
+    public void Cancel()
+    {
+        if (!exploding)
+        {
+            Destroy(gameObject); // the shadow is a child, so it goes too
+            return;
+        }
+
+        hitPlayer = true;
+        if (col != null)
+        {
+            col.enabled = false;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         TryHitPlayer(other);
